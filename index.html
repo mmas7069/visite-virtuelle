@@ -1,31 +1,24 @@
-<script>
-pannellum.viewer('panorama', {
-  default: {
-    firstScene: 'salon',
-    sceneFadeDuration: 1000
-  },
-  scenes: {
-    salon: {
-      title: 'Salon',
+!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Visite Virtuelle</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.7/build/pannellum.css">
+  <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.7/build/pannellum.js"></script>
+  <style>
+    body { margin: 0; }
+    #panorama { width: 100%; height: 100vh; }
+  </style>
+</head>
+<body>
+  <div id="panorama"></div>
+  <script>
+    pannellum.viewer('panorama', {
       type: 'equirectangular',
       panorama: 'salon-tv.jpg',
       autoLoad: true,
-      hotSpots: [{
-        pitch: -10, yaw: 90,
-        type: 'scene',
-        text: 'Aller dans la cuisine',
-        sceneId: 'cuisine'
-      }]
-    },
-    cuisine: {
-      title: 'Cuisine',
-      type: 'equirectangular',
-      panorama: 'cuisine-ilot.jpg',
-      hotSpots: [{
-        pitch: -10, yaw: -90,
-        type: 'scene',
-        text: 'Retour au salon',
-        sceneId: 'salon'
-      }]
-    }
-  }
+      autoRotate: -2
+    });
+  </script>
+</body>
+</html>
