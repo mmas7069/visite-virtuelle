@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Visite Virtuelle</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.7/build/pannellum.css">
+  <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.7/build/pannellum.js"></script>
+  <style>
+    body { margin: 0; }
+    #panorama { width: 100%; height: 100vh; }
+  </style>
+</head>
+<body>
+  <div id="panorama"></div>
+  <script>
+    pannellum.viewer('panorama', {
+      type: 'equirectangular',
+      panorama: 'salon.jpg',
+      autoLoad: true,
+      autoRotate: -2
+    });
+  </script>
+</body>
+</html>
